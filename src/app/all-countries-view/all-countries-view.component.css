@@ -1,0 +1,63 @@
+/* Here Import Particular Font Refrence link */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
+button{
+    display: block;
+    margin-top:1%;
+    border:3px inset #be9063;
+    padding:0.5% 4%;
+    background-color: #132226;
+    color:#be9063;
+    font-size:17px;
+    font-weight:700;
+    font-family: 'Cormorant', serif;
+}
+
+input {
+    margin-top:1.5%;
+    width:100%;
+    padding:0.5%;
+    border-radius:5px;
+    border-left:5px inset #be9063;
+    background:#132226;
+    color:#be9063;
+    font-weight:800;
+    letter-spacing:2px;
+    font-family: 'Cormorant', serif;
+}
+
+/* Here Style a Card */
+.card {
+    background-color:#132226;
+    margin:5% auto;
+    border:5px inset #be9063;
+}
+
+/* Here Card tile Style */
+.card-title{
+    color:#be9063;
+    font-size:30px;
+    font-family: 'Cormorant', serif;
+    font-weight:bold;
+    text-align: center;
+}
+
+/* Here Card Text Style */
+.card-text {
+    color:#525b56;
+    font-family: 'Cormorant', serif;
+    font-weight:800;
+}
+
+/* Here Style Card Footer */
+.card-footer{
+    border-top:2px inset #be9063;
+}
+
+/* Here Design Footer of routerLink */
+a {
+    color:#be9063;
+    border:2px inset #be9063;
+    border-radius:0px 50px 5px 0px;
+    padding:1% 4%;
+}

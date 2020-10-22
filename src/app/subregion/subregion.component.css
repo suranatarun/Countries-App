@@ -1,0 +1,38 @@
+/* Here Import google font reference */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* Here Stying First Row Contents */
+.row {
+    padding:3%;
+    background-color:#132226;
+    border-radius:5px;
+    border:5px inset #be9063;
+}
+/* Here Styling a region title */
+h1.region-title {
+    color:#132226;
+    display: block;
+    font-size:6vw;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+/* Here Design a card to look a beautiful */
+.card {
+    background-color: #040c0e;
+    border-radius:0px 5px 5px 0px;
+    padding:2%;
+}
+/* Here use CSS to change card title */
+.card-title {
+    font-size:3vw;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    color:#525b56;
+}
+/* Here use CSS to change all other text which is below from card title */
+.card-text {
+    font-size:1.6vw;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+    color:#525b56;
+}

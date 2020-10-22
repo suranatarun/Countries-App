@@ -1,0 +1,46 @@
+/* Here Import Particular Font Refrence link */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
+/* Here Style a card using some CSS properties */
+.container {
+    background-color:#040c0e;
+}
+input {
+    width:97%;
+    margin:2% 1%;
+    padding:0.5%;
+    border-left:3px inset #be9063;
+    border-radius:5px;
+    background-color: #132226;
+    font-family: 'Cormorant', serif;
+    font-weight:800;
+    font-size:18px;
+}
+.card {
+    background-color:#132226;
+    border-radius:10px;
+    margin:3%;
+    border:5px inset #be9063
+}
+/* Here Maintain a image using properties */
+img {
+    height:150px;
+    max-width:100%;
+    border-radius:10px 10px 0px 0px;
+}
+/* Here style h1 tag using some properties */
+h1{
+    color:#525b56;
+    text-align:center;
+    font-size:30px;
+    font-weight:bold;
+    padding:1.2%;
+    font-family: 'Cormorant', serif;
+}
+p {
+    color:#525b56;
+    font-weight:bold;
+    font-size:18px;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}

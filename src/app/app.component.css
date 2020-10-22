@@ -1,0 +1,151 @@
+/* Here Import Particular Font Refrence link */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
+/*============= HERE DESIGN A HEADER ================================================================================*/
+/* Here Use Body Tag this tag cover whole page styling */
+body {
+    background:#525b56;
+}
+
+/* Here Styling navbar  */
+.navbar {
+    background-color:#040c0e;
+    border-bottom:5px inset #be9063;
+}
+
+/* Here Navbar Main title styling */
+.navbar-brand {
+    color:#525b56;
+    font-size:3vw;
+    font-weight:600;
+    font-family: 'Cormorant', serif;
+    text-transform: uppercase;
+}
+/* here used bootstrap collapse property to shift margin right side  */
+.collapse {
+    margin-left:20%;
+}
+
+/* Here give style to nav link  */
+.navbar-nav .nav-link {
+    color:#be9063;
+    font-size:20px;
+    font-weight:600;
+    font-family: 'Cormorant', serif;
+}
+
+/*=================== HERE FOOTER DESIGN  ===================================================================*/
+.container{
+    background-color:#040c0e;
+    padding:1%;
+    border-radius:20px 20px 0px 0px;
+    border:5px inset #be9063;
+}
+
+/* Here First Heading Styling  */
+.exter-head {
+    color:#525b56;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+    padding-left:4%
+}
+
+/* Here Styling a First Navigation List */
+ul.external-links {
+    list-style-type:none;
+    margin:0;
+    padding-left:4%;
+    overflow:hidden;
+}
+ul.external-links li.li {
+    float:none;
+}
+ul.external-links li.li a.exter {
+    display:block;
+    text-align: left;
+    color:#be9063;
+    padding-top:1%;
+    letter-spacing:2px;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+}
+ul.external-links li.li a.exter {
+    text-decoration: none;
+}
+
+/* Here Second Heading Styling  */
+.inter-head {
+    color:#525b56;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+    padding-left:4%
+}
+
+/* Here Styling a First Navigation List */
+ol.internal-links {
+    list-style-type:none;
+    margin:0;
+    padding-left:4%;
+    overflow:hidden;
+}
+ol.internal-links li.ol {
+    float:none;
+}
+ol.internal-links li.ol a.inter {
+    display:block;
+    text-align: left;
+    color:#be9063;
+    padding-top:1%;
+    letter-spacing:2px;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+}
+ol.internal-links li.ol a.inter {
+    text-decoration: none;
+}
+
+/* Here Styling a form */
+input[type=text] {
+    width:24.5vw;
+    border:none;
+    color:#be9063;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+    border-bottom:1.5px solid #be9063;
+    background-color: transparent;
+    letter-spacing:1px;
+}
+
+input[type=email] {
+    width:24.5vw;
+    padding-top:2%;
+    border:none;
+    color:#be9063;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+    border-bottom:1.5px solid #be9063;
+    background-color: transparent;
+}
+textarea {
+    width:24.5vw;
+    padding-top:2%;
+    border:none;
+    color:#be9063;
+    font-family: 'Cormorant', serif;
+    font-weight:600;
+    border-bottom:1.5px solid #be9063;
+    background-color: transparent;
+}
+
+input[type=submit] {
+    border:2px inset #be9063;
+    width:auto;
+    margin-top:2%;
+    color:#be9063;
+    font-family: 'Cormorant', serif;
+    font-weight:800;
+    font-size:18px;
+    padding:1% 5%;
+    letter-spacing:2px;
+    background:transparent;
+}

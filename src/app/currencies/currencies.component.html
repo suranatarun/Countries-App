@@ -1,0 +1,20 @@
+<div class="container"><!-- This is Country displaying box -->
+    <input type="text" [(ngModel)]="search" placeholder="Search by Currency"><br>
+    <div class="row"><!-- Here Create Row to maintain a cols -->
+        <div *ngFor="let currency of CurrenciesList | filter: search" class="col-md-3"><!-- Here Create & Start Column -->
+            <div class="card"><!-- Here Create Card which contain flag and country name -->
+                <img class="image" src="{{currency.flag}}" alt="Flags of different countries">
+                <div class="card-body"><!-- Here Create Card Body which contain a couhtry name -->
+                    <h1 class="card-title">{{currency.name}}</h1>
+                    <p>
+                        Code:- <span>{{currency.currencies[0].code}}</span><br>
+                        Name:- <span> {{currency.currencies[0].name}}</span><br>
+                        Symbol:- <span> {{currency.currencies[0].symbol}}</span>
+                    </p>
+                </div><!-- Here Endup card body which contain a country name -->
+            </div><!-- Here Endup a Card -->
+        </div><!-- Here Endup Column -->
+    </div><!-- Here Endup row to maintain cols -->
+</div><!-- Here Endup Country dispaying box --> 
+
+

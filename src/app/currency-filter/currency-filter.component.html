@@ -1,0 +1,25 @@
+<div *ngIf="SingleCurrency" class="container"><!-- Here Container Start -->
+    <a [routerLink]="['/region/countries/', SingleCurrency[0].region, SingleCurrency[0].name]">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Go Back</a>
+    <input type="text" placeholder="Search by Countries, Currencies, Capital" [(ngModel)]="search">
+        <div class="row"><!-- Here Row Start -->
+            <div *ngFor="let countries of SingleCurrency | filter:search" class="col-md-4">
+                <div class="card"><!-- Here Start Card -->
+                    <img src="{{countries.flag}}" alt="Flags of Different Countries">
+                    <div class="card-body">
+                        <h5 class="card-title">{{countries.name}}</h5>
+                        <p class="card-text"><b>Capital:-</b>{{countries.capital}}</p>
+                        <p class="card-text"><b>TimeZone:-</b>{{countries.timezones}}</p>
+                        <p class="card-text"><b>Currency:-</b><b>[</b><span>{{countries.currencies[0].code}}</span>, <span>{{countries.currencies[0].name}}</span>, <span>{{countries.currencies[0].symbol}}</span><b> ]</b></p>
+                        <p class="card-text"><b>SubRegion:-</b>{{countries.subregion}}</p>
+                        <p class="card-text"><b>Region:-</b>{{countries.region}}</p>
+                    </div>
+                </div><!-- End of the card here -->
+            </div>
+        </div><!-- Here Row End -->
+</div><!-- Here Container End -->

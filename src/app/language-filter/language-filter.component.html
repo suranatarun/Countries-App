@@ -1,0 +1,36 @@
+<div *ngIf="AllDataByLanguage" class="container">
+    <a [routerLink]="['/region/countries', AllDataByLanguage[0].region, AllDataByLanguage[0].name]" >
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Go Back
+    </a>
+    <input type="text" placeholder="Search by Country, Languages, Capital, Region" [(ngModel)]="search">
+    <div class="row">
+        <div *ngFor="let country of AllDataByLanguage | filter:search" class="col-md-4">
+            <div class="card">
+                <img src="{{country.flag}}" class="card-img-top" alt="Flags of different countries">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.name}}</h5>
+                    <p class="card-text"><b>Capital:-</b>{{country?.capital}}</p>
+                    <p class="card-text"><b>TimeZone:-</b>{{country?.timezones}}</p>
+                    <p class="card-text"><b>SubRegion:-</b>{{country?.subregion}}</p>
+                    <p class="card-text"><b>Region:-</b>{{country?.region}}</p>
+                    <p class="card-text"><b>Languages:-</b><br>
+                        <span><b>iso639_1:-</b> {{country.languages[0]?.iso639_1}}</span><br>
+                        <span><b>iso639_2:-</b> {{country.languages[0]?.iso639_2}}</span><br>
+                        <span><b>Name:-</b> {{country.languages[0]?.name}}</span><br>
+                        <span><b>NativeName:-</b> {{country.languages[0]?.nativeName}}</span><br>
+                        <br>
+                        <span><b>iso639_1:-</b> {{country.languages[1]?.iso639_1}}</span><br>
+                        <span><b>iso639_2:-</b> {{country.languages[1]?.iso639_2}}</span><br>
+                        <span><b>Name:-</b> {{country.languages[1]?.name}}</span><br>
+                        <span><b>NativeName:-</b> {{country.languages[1]?.nativeName}}</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

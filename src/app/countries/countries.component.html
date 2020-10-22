@@ -1,0 +1,13 @@
+<div class="container">
+    <input type="text" [(ngModel)]="search" placeholder="Search by Countries" ><br>
+    <div class="row">
+        <div *ngFor="let singleCountry of CountriesList | filter: search" class="col-md-3">
+            <div class="card">
+                <img class="image" src="{{singleCountry.flag}}" alt="Flags of different countries">
+                <div class="card-body">
+                    <h1 class="card-title">{{singleCountry.name}}</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

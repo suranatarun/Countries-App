@@ -1,0 +1,14 @@
+<div class="container">
+    <input type="text" [(ngModel)]="search" placeholder="Search by Calling Codes" ><br>
+    <div class="row">
+        <div *ngFor="let dailCode of CallingCodeList | filter: search" class="col-md-3">
+            <div class="card">
+                <img class="image" src="{{dailCode.flag}}" alt="Flags of different countries">
+                <div class="card-body">
+                    <h1 class="card-title">{{dailCode.name}}</h1>
+                    <p class="card-text"><b>Calling Code:- </b>{{dailCode.callingCodes}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

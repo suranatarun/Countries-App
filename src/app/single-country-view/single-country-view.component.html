@@ -1,0 +1,119 @@
+<div  *ngIf="SingleCountryData" class="container"><!-- Here Start Container-->
+    <a id="link" [routerLink]="['/region/countries/', SingleCountryData[0].region]">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left" fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        Go Back</a>
+    <div class="jumbotron"> <!-- Here Jumbotron Used that contain flag name country name -->
+        <img src="{{SingleCountryData[0].flag}}" class="img-fluid" alt="Flag of {{SingleCountryData[0].name}}">
+        <h1 class="card-title">{{SingleCountryData[0].name}}</h1>
+    </div>
+    <div class="row"><!-- Here Used a Row -->
+        <div class="col-md-6"><!--- Here Used Col-md-6 to make two columns in one row-->
+            <div *ngIf="SingleCountryData" class="card"> <!-- Here Style First Card -->
+                <div class="card-body">
+                    <b class="title">Capital:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.capital}}</p>
+                    <b class="title">NativeName:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.nativeName}}</p>
+                    <b class="title">Region:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.region}}</p>
+                    <b class="title">Sub Region:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.subregion}}</p>
+                    <b class="title">Top Level Domain:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.topLevelDomain}}</p>
+                </div>
+            </div> <!-- Here End First Card -->
+        </div><!-- Here End a Column col-md-6 -->
+
+        <div class="col-md-6"><!-- Here Used col-md-6 to make a second card -->
+            <div *ngIf="SingleCountryData" class="card"> <!-- Here Create Second Card-->
+                <div class="card-body">
+                    <b class="title">Alpha2Code:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.alpha2Code}}</p>
+                    <b class="title">Alpha3Code:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.alpha3Code}}</p>
+                    <b class="title">Population:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.population}}</p>
+                    <b class="title">Area:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.area}}</p>
+                    <b class="title">TimeZones:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.timezones}}</p>
+                    <b class="title">Numeric Code:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.numericCode}}</p>
+                </div>
+            </div><!-- Here End a Second Card -->
+        </div><!-- Here End col-md-6 to make a Card -->
+
+        <div class="col-md-6"><!-- Here Used col-md-6 to make a third card -->
+            <div *ngIf="SingleCountryData" class="card"> <!-- Here Create third Card-->
+                <div class="card-body">
+                    <b class="title">Latitude & Longitude:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.latlng}}</p>
+                    <b class="title">Calling Codes:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.callingCodes}}</p>
+                    <b class="title">Alt Spellings:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.altSpellings}}</p>
+                    <b class="title">Demonym:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.demonym}}</p>
+                    <b class="title">Gini:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.gini}}</p>
+                    <b class="title">Border:-</b>
+                    <p class="card-text">{{SingleCountryData[0]?.borders}}</p>
+                </div>
+            </div><!-- Here End a third Card -->
+        </div><!-- Here End col-md-6 to make a third Card -->
+
+        <div class="col-md-6"><!-- Here Used col-md-6 to make a fourth card -->
+            <div class="card"><!-- Here Create fourth Card-->
+                <div class="card-body">
+                    <b class="title">Currency:-</b>
+                    <p *ngIf="SingleCountryData" class="card-text">
+                        <b>Code:-</b><span><a class="router"
+                                [routerLink]="['/region/countries',SingleCountryData[0].region, SingleCountryData[0].name, SingleCountryData[0].currencies[0].code]">{{SingleCountryData[0].currencies[0].code}}</a></span><br>
+                        <b>Name:-</b><span>{{SingleCountryData[0].currencies[0]?.name}}</span><br>
+                        <b>Symbol:-</b><span>{{SingleCountryData[0].currencies[0]?.symbol}}</span><br>
+                    </p>
+                    <b class="title">Languages:-</b>
+                    <p *ngIf="SingleCountryData" class="card-text">
+                        <b>iso639_1:-</b><span>
+                            <a class="router"
+                                [routerLink]="['/region/countries/language',SingleCountryData[0].region, SingleCountryData[0].name, SingleCountryData[0].languages[0].iso639_1]">{{SingleCountryData[0].languages[0]?.iso639_1}}</a></span><br>
+                        <b>iso639_2:-</b><span> {{SingleCountryData[0].languages[0]?.iso639_2}}</span><br>
+                        <b>Name:-</b><span> {{SingleCountryData[0].languages[0]?.name}}</span><br>
+                        <b>NativeName:-</b><span> {{SingleCountryData[0].languages[0]?.nativeName}}</span><br>
+                        <br>
+                        <b>iso639_1:-</b><span>{{SingleCountryData[0].languages[1]?.iso639_1}}</span><br>
+                        <b>iso639_2:-</b><span>{{SingleCountryData[0].languages[1]?.iso639_2}}</span><br>
+                        <b>Name:-</b><span>{{SingleCountryData[0].languages[1]?.name}}</span><br>
+                        <b>NativeName:-</b><span>{{SingleCountryData[0].languages[1]?.nativeName}}</span>
+                    </p>
+                    <b class="title">Translations:-</b>
+                    <p *ngIf="SingleCountryData" class="card-text">
+                        <span><b>de:-</b>{{SingleCountryData[0].translations?.de}}</span><br>
+                        <span><b>es:-</b> {{SingleCountryData[0].translations?.es}}</span><br>
+                        <span><b>fr:-</b> {{SingleCountryData[0].translations?.fr}}</span><br>
+                        <span><b>ja:-</b> {{SingleCountryData[0].translations?.ja}}</span><br>
+                        <span><b>it:-</b> {{SingleCountryData[0].translations?.it}}</span><br>
+                        <span><b>br:-</b> {{SingleCountryData[0].translations?.br}}</span><br>
+                        <span><b>pt:-</b> {{SingleCountryData[0].translations?.pt}}</span><br>
+                        <span><b>nl:-</b> {{SingleCountryData[0].translations?.nl}}</span><br>
+                        <span><b>hr:-</b> {{SingleCountryData[0].translations?.hr}}</span><br>
+                        <span><b>fa:-</b> {{SingleCountryData[0].translations?.fa}}</span><br>
+                    </p>
+                    <b class="title">RegionBlocs:-</b>
+                    <p *ngIf="SingleCountryData" class="card-text">
+                        <span><b>Acronym:-</b>{{SingleCountryData[0].regionalBlocs[0]?.acronym}}</span><br>
+                        <span><b>Name:-</b>{{SingleCountryData[0].regionalBlocs[0]?.name}}</span><br>
+                        <span><b>Other Acronyms:-</b>{{SingleCountryData[0].regionalBlocs[0]?.otherAcronyms}}</span><br>
+                        <span><b>Other Names:-</b>{{SingleCountryData[0].regionalBlocs[0]?.otherNames}}</span>
+                    </p>
+                    <b class="title">Cioc:-</b>
+                    <p *ngIf="SingleCountryData" class="card-text">{{SingleCountryData[0]?.cioc}}</p>
+                </div>
+            </div><!-- Here End a Fourth Card -->
+        </div><!-- Here Used col-md-6 to make a fourth card -->
+    </div>
+</div>

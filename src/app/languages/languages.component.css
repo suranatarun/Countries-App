@@ -1,0 +1,39 @@
+.container-fluid {
+    margin:2% auto;
+}
+input {
+    width:100%;
+    margin:2% 0%;
+    border-left:3px solid #be9063;
+    padding:0.5%;
+    font-family: 'Cormorant', serif;
+    font-weight:700;
+    font-size:18px;
+    border-radius:5px;
+    background-color:#132226;
+
+}
+img {
+    height:300px;
+    width:100%;
+}
+.card {
+    margin:2% 1%;
+    border:5px inset #be9063;
+    background-color:#132226;
+}
+.card-title {
+    font-size:35px;
+    font-family:'Cormorant', serif;
+    font-weight:700;
+    display: block;
+    text-align: center;
+    color:#525b56;
+}
+b{
+    color:#7f8581;
+}
+span {
+    font-family:'Cormorant', serif;
+    color: #be9063;
+}

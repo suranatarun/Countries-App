@@ -1,0 +1,22 @@
+<div *ngIf="CountriesList" class="container"> <!-- Here start container -->
+    <button (click)="goback()">Go Back</button>
+    <input type="text" [(ngModel)]="search" placeholder="Search by Country, Region, Subregion, Capital" >
+    <div class="row"> <!-- Here start row which contain 3 columns -->
+        <div  *ngFor="let country of CountriesList | filter: search" class="col-md-4">
+            <div class="card"> <!-- Here start card to contain information about particular country -->
+                <img src="{{country.flag}}" class="card-img-top" alt="Flags of different countries">
+                <div class="card-body">
+                    <h5 class="card-title">{{country.name}}</h5>
+                    <p class="card-text"><b>Capital:-</b> {{country.capital}}</p>
+                    <p class="card-text"><b>TimeZone:-</b> {{country.timezones}}</p>
+                    <p class="card-text"><b>Currency:-</b><b>[</b><span> {{country.currencies[0].code}}</span>, <span>{{country.currencies[0].name}}</span>, <span> {{country.currencies[0].symbol}}</span><b> ]</b></p>
+                    <p class="card-text"><b>SubRegion:-</b> {{country.subregion}}</p>
+                    <p class="card-text"><b>Region:-</b> {{country.region}}</p>
+                </div>
+                <div class="card-footer"> <!-- Here Footer of Card which contain Link of other page -->
+                    <a [routerLink]="['/region/countries',country.region,country.name]">Show {{country.name}} Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

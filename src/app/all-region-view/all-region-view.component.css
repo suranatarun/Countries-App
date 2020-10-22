@@ -1,0 +1,43 @@
+/* Here Import Particular Font Refrence link */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant&display=swap');
+
+/* Here Design Card col-md-4 */
+.card-one {
+    background-color:#132226;
+    padding:2%;
+    margin:4% 0%;
+    border-radius:20px;
+    border:5px inset #be9063;
+}
+i {
+    color:#a4978e;
+    font-size:8vw;
+    width:100%;
+    text-align: center;
+}
+h1 {
+    color:#be9063;
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+a {
+    text-align:center;
+    display:block;
+    font-family: 'Cormorant', serif;
+    font-size:20px;
+    color:#a4978e;
+    font-weight:600;
+    letter-spacing:0.5px;
+}
+a {
+    text-decoration: none;
+}
+
+/* Here Design Second Card col-md-6  */
+.card-two {
+    background-color:#132226;
+    padding:2%;
+    margin:4% 0%;
+    border-radius:20px;
+    border:5px inset #be9063;
+}

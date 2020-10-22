@@ -1,0 +1,30 @@
+<div class="container-fluid">
+    <input type="text" [(ngModel)]="search" placeholder="Search by Languages" ><br>
+    <div class="row">
+        <div *ngFor="let language of LanguagesList | filter: search" class="col-md-6">
+            <div class="card">
+                <img class="image" src="{{language.flag}}" alt="Flags of different countries">
+                <div class="card-body">
+                    <h1 class="card-title">{{language.name}}</h1>
+                    <p>
+                        <b>Languages:-</b><br>
+                        <b>iso639_1:-</b><span> {{language.languages[0]?.iso639_1}}</span>&nbsp;
+                        <b>iso639_2:-</b><span> {{language.languages[0]?.iso639_2}}</span>&nbsp;
+                        <b>Name:-</b><span> {{language.languages[0]?.name}}</span>&nbsp;
+                        <b>NativeName:-</b><span> {{language.languages[0]?.nativeName}}</span>&nbsp;
+                        <br>
+                        <b>iso639_1:-</b><span> {{language.languages[1]?.iso639_1}}</span>&nbsp;
+                        <b>iso639_2:-</b><span> {{language.languages[1]?.iso639_2}}</span>&nbsp;
+                        <b>Name:-</b><span> {{language.languages[1]?.name}}</span>&nbsp;
+                        <b>NativeName:-</b><span> {{language.languages[1]?.nativeName}}</span>&nbsp;
+                        <br>
+                        <b>iso639_1:-</b><span> {{language.languages[2]?.iso639_1}}</span>&nbsp;
+                        <b>iso639_2:-</b><span> {{language.languages[2]?.iso639_2}}</span>&nbsp;
+                        <b>Name:-</b><span> {{language.languages[2]?.name}}</span>&nbsp;
+                        <b>NativeName:-</b><span> {{language.languages[2]?.nativeName}}</span>&nbsp;
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
