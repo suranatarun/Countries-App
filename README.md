@@ -20,5 +20,5 @@ Where it is hosted?
 3:- Third dist folder of project upload on S3 bucket.
 4:- Fourth finally launch the our site on AWS S3 bucket.
 
-Here link mention of my webite:-
+Here link mention of my website:-
 http://countries-application.s3-website.ap-south-1.amazonaws.com
